@@ -1,3 +1,4 @@
+<%=link_to "Home", articles_path %>
 <h1>Title: <%= @article.title %></h1>
 <p>Body: <%= @article.body %></p>
 <%= link_to "Home", articles_path%>
@@ -8,3 +9,16 @@
                     turbo_confirm: "Delete pre?"
                   } %></li>
 </ul>
+<h2>Add a comment:</h2>
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+<%= render "comments/form", article: @article %>
