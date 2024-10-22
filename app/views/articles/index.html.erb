@@ -9,4 +9,11 @@
 <br>
 <br>
 <%= link_to "New Article", new_article_path %>
-<h1>batch 36</h1>
+<br>
+<br>
+<% if user_signed_in? %>
+  <h1> <%= current_user.email %> is signed in </h1>
+  <h1> WELCOME BATCH 36! </h1>
+<% else %>
+  <h1> You are not signed in </h1>
+<% end %>

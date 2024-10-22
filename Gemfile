@@ -69,3 +69,5 @@ end
 gem 'devise', '~> 4.9', '>= 4.9.4'
 
 gem 'rails_live_reload'
+
+gem 'sassc-rails'
